@@ -92,10 +92,13 @@
 
             const phonePrice = document.getElementById('phonePrice').innerHTML;
             const phonePriceNumber = parseFloat(phonePrice);
+            const casePrice = document.getElementById('casePrice').innerHTML;
+            const casePriceNumber = parseFloat(casePrice);
+
             const totalPhonePrice = phonePriceNumber + 1219;
             document.getElementById('phonePrice').innerHTML = totalPhonePrice;
 
-            const totalSubtotal = phonePriceNumber + 1278;
+            const totalSubtotal = totalPhonePrice + casePriceNumber ;
             document.getElementById('subtotal').innerHTML = totalSubtotal;
             document.getElementById('total').innerHTML = totalSubtotal;
          }
@@ -111,6 +114,7 @@
 
             const phonePrice1 = document.getElementById('phonePrice').innerHTML;
             const phonePriceNumber1 = parseFloat(phonePrice1);
+
             const totalPhonePrice1 = phonePriceNumber1 - 1219;
             document.getElementById('phonePrice').innerHTML = totalPhonePrice1;
 
@@ -132,12 +136,15 @@
          if(total <= 20){
             document.getElementById('items2').value = total;
 
+            const phonePrice = document.getElementById('phonePrice').innerHTML;
+            const phonePriceNumber = parseFloat(phonePrice);
             const casePrice = document.getElementById('casePrice').innerHTML;
             const casePriceNumber = parseFloat(casePrice);
+
             const totalCasePrice = casePriceNumber + 59;
             document.getElementById('casePrice').innerHTML = totalCasePrice;
 
-            const totalSubtotal = casePriceNumber + 1278;
+            const totalSubtotal = totalCasePrice + phonePriceNumber ;
             document.getElementById('subtotal').innerHTML = totalSubtotal;
             document.getElementById('total').innerHTML = totalSubtotal;
          }
